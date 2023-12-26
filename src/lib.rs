@@ -24,12 +24,17 @@ pub struct MyStruct {
 }
 
 // Rust 中的函数，返回一个结构体
+// #[no_mangle]
+// pub extern "C" fn get_struct() -> MyStruct {
+//     MyStruct {
+//         field1: 42,
+//         field2: 3.14,
+//     }
+// }
+
 #[no_mangle]
-pub extern "C" fn get_struct() -> MyStruct {
-    MyStruct {
-        field1: 42,
-        field2: 3.14,
-    }
+pub extern "C" fn get_aa() -> i32 {
+    1i32
 }
 
 
